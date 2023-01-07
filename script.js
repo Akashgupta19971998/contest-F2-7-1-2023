@@ -7,21 +7,36 @@ let arr = [
 ];
 
 function PrintDeveloperswithMap() {
-  //Write your code here
+  arr.map((e)=>{
+    if(e.profession ==="developer"){
+      console.log(e);
+    }
+  }
+  )
 }
 
 function PrintDeveloperbyForEach() {
-  //Write your code here
+  arr.forEach((e)=>{
+    if(e.profession ==="developer"){
+      console.log(e);
+    }
+  }
+  )
 }
 
 function addData() {
-  //Write your code here
+ arr.push({id: 4, name: "Akash", age: "25", profession: "developer"});
+ console.log(arr);
 }
 
 function removeAdmin() {
-  //Write your code here
+  let filterArr=arr.filter((arr)=>arr.profession!=="admin");
+  arr.pop();
+  console.log(filterArr);
 }
 
 function concatenateArray() {
-  //Write your code here
+  let newArr=[{id: 5, name: "Prakash", age: "25", profession: "developer"}];
+  let concatArr=arr.concat(newArr);
+  console.log(concatArr);
 }
